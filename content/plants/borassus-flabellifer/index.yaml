@@ -1,0 +1,50 @@
+scientificName: Borassus flabellifer
+author: L.
+rank: species
+family: arecaceae
+genus: Borassus
+synonyms: []
+khmerName: ត្នោត
+khmerNameLatin: Thnot
+englishName: Palmyra palm
+otherLocalNames: []
+growthForms:
+  - palm
+originStatus: native
+iucnStatus: NE
+provinces:
+  - kampong-speu
+  - takeo
+  - kandal
+  - kampong-chhnang
+  - prey-veng
+  - svay-rieng
+  - siem-reap
+  - kampot
+  - battambang
+habitats:
+  - farmland-and-rice-fields
+  - towns-and-gardens
+isSensitive: false
+floweringMonths: []
+fruitingMonths: []
+uses:
+  - food
+  - fibre
+  - timber
+  - ritual
+toxicity: {}
+summary:
+  en: "Cambodia's national tree: a tall fan palm standing in rice fields across the country, tapped for palm sugar."
+description: {}
+identification: {}
+usesNotes: {}
+images: []
+links: {}
+references:
+  - powo
+  - dy-phon-2000
+profileLevel: full
+reviewStatus: draft
+contributors:
+  - plant-in-cambodia-team

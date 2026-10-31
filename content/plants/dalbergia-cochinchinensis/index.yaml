@@ -1,0 +1,44 @@
+scientificName: Dalbergia cochinchinensis
+author: Pierre
+rank: species
+family: fabaceae
+genus: Dalbergia
+synonyms: []
+khmerName: ក្រញូង
+khmerNameLatin: Kranhung
+englishName: Siamese rosewood
+otherLocalNames: []
+growthForms:
+  - tree
+originStatus: native
+iucnStatus: VU
+provinces:
+  - kampong-thom
+  - preah-vihear
+  - siem-reap
+  - oddar-meanchey
+  - kratie
+  - stung-treng
+habitats:
+  - mixed-deciduous-forest
+  - semi-evergreen-forest
+isSensitive: true
+floweringMonths: []
+fruitingMonths: []
+uses:
+  - timber
+toxicity: {}
+summary:
+  en: A medium-sized tree whose dark red heartwood is one of the most valuable timbers in the world. Heavily threatened by illegal logging.
+description: {}
+identification: {}
+usesNotes: {}
+images: []
+links: {}
+references:
+  - powo
+  - iucn-red-list
+profileLevel: full
+reviewStatus: draft
+contributors:
+  - plant-in-cambodia-team

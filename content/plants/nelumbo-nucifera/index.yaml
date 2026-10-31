@@ -1,0 +1,53 @@
+scientificName: Nelumbo nucifera
+author: Gaertn.
+rank: species
+family: nelumbonaceae
+genus: Nelumbo
+synonyms: []
+khmerName: ឈូក
+khmerNameLatin: Chhouk
+englishName: Sacred lotus
+otherLocalNames: []
+growthForms:
+  - aquatic
+originStatus: native
+iucnStatus: DD
+provinces:
+  - kandal
+  - takeo
+  - prey-veng
+  - kampong-chhnang
+  - siem-reap
+  - battambang
+  - pursat
+habitats:
+  - freshwater-wetland
+  - farmland-and-rice-fields
+isSensitive: false
+floweringMonths:
+  - "5"
+  - "6"
+  - "7"
+  - "8"
+  - "9"
+  - "10"
+fruitingMonths: []
+uses:
+  - food
+  - ornamental
+  - ritual
+toxicity: {}
+summary:
+  en: An aquatic plant with large round leaves held above the water and big pink or white flowers, offered at pagodas and eaten as a vegetable.
+description: {}
+identification: {}
+usesNotes: {}
+images: []
+links: {}
+references:
+  - powo
+  - dy-phon-2000
+profileLevel: full
+reviewStatus: draft
+contributors:
+  - plant-in-cambodia-team

@@ -1,0 +1,41 @@
+scientificName: Sphaerocoryne affinis
+author: (Teijsm. & Binn.) Ridl.
+rank: species
+family: annonaceae
+genus: Sphaerocoryne
+synonyms: []
+khmerName: រំដួល
+khmerNameLatin: Rumdul
+englishName: Rumdul
+otherLocalNames: []
+growthForms:
+  - shrub
+  - tree
+originStatus: native
+iucnStatus: NE
+provinces:
+  - phnom-penh
+  - kandal
+  - siem-reap
+habitats:
+  - towns-and-gardens
+  - secondary-forest-and-scrub
+isSensitive: false
+floweringMonths: []
+fruitingMonths: []
+uses:
+  - ornamental
+toxicity: {}
+summary:
+  en: "Cambodia's national flower: a shrub or small tree with small, pale yellow flowers that are strongly fragrant in the evening."
+description: {}
+identification: {}
+usesNotes: {}
+images: []
+links: {}
+references:
+  - powo
+profileLevel: full
+reviewStatus: draft
+contributors:
+  - plant-in-cambodia-team

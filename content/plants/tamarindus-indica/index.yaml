@@ -1,0 +1,45 @@
+scientificName: Tamarindus indica
+author: L.
+rank: species
+family: fabaceae
+genus: Tamarindus
+synonyms: []
+khmerName: អំពិល
+khmerNameLatin: Ampil
+englishName: Tamarind
+otherLocalNames: []
+growthForms:
+  - tree
+originStatus: introduced
+iucnStatus: LC
+provinces:
+  - phnom-penh
+  - kandal
+  - kampong-cham
+  - siem-reap
+  - battambang
+  - takeo
+habitats:
+  - towns-and-gardens
+  - farmland-and-rice-fields
+isSensitive: false
+floweringMonths: []
+fruitingMonths: []
+uses:
+  - food
+  - timber
+  - ornamental
+toxicity: {}
+summary:
+  en: A large, long-lived tree grown across Cambodia for its sour fruit pulp, a key ingredient in Khmer cooking.
+description: {}
+identification: {}
+usesNotes: {}
+images: []
+links: {}
+references:
+  - powo
+profileLevel: full
+reviewStatus: draft
+contributors:
+  - plant-in-cambodia-team

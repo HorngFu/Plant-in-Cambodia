@@ -1,0 +1,43 @@
+scientificName: Mangifera indica
+author: L.
+rank: species
+family: anacardiaceae
+genus: Mangifera
+synonyms: []
+khmerName: ស្វាយ
+khmerNameLatin: Svay
+englishName: Mango
+otherLocalNames: []
+growthForms:
+  - tree
+originStatus: cultivated
+iucnStatus: DD
+provinces:
+  - kampong-speu
+  - battambang
+  - takeo
+  - kandal
+  - siem-reap
+habitats:
+  - farmland-and-rice-fields
+  - towns-and-gardens
+isSensitive: false
+floweringMonths: []
+fruitingMonths: []
+uses:
+  - food
+  - timber
+toxicity: {}
+summary:
+  en: An evergreen fruit tree grown across Cambodia. Its fruit is eaten green and sour or ripe and sweet.
+description: {}
+identification: {}
+usesNotes: {}
+images: []
+links: {}
+references:
+  - powo
+profileLevel: checklist
+reviewStatus: draft
+contributors:
+  - plant-in-cambodia-team

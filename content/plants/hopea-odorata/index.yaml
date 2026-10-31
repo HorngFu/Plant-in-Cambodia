@@ -1,0 +1,48 @@
+scientificName: Hopea odorata
+author: Roxb.
+rank: species
+family: dipterocarpaceae
+genus: Hopea
+synonyms: []
+khmerName: គគីរ
+khmerNameLatin: Koki
+englishName: White thingan
+otherLocalNames: []
+growthForms:
+  - tree
+originStatus: native
+iucnStatus: VU
+provinces:
+  - phnom-penh
+  - kandal
+  - kampong-cham
+  - kampong-thom
+  - kratie
+  - stung-treng
+  - siem-reap
+  - battambang
+habitats:
+  - riverbank
+  - semi-evergreen-forest
+  - towns-and-gardens
+isSensitive: true
+floweringMonths: []
+fruitingMonths: []
+uses:
+  - timber
+  - ornamental
+toxicity: {}
+summary:
+  en: A tall, evergreen dipterocarp tree with a dense crown. Its durable timber has long been used for boats, and it is often planted along roads and in pagodas.
+description: {}
+identification: {}
+usesNotes: {}
+images: []
+links: {}
+references:
+  - powo
+  - iucn-red-list
+profileLevel: full
+reviewStatus: draft
+contributors:
+  - plant-in-cambodia-team
