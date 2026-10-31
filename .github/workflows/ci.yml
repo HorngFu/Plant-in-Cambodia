@@ -23,6 +23,8 @@ jobs:
       - run: pnpm lint
       - run: pnpm typecheck
       - run: pnpm format:check
+      - run: pnpm validate
+      - run: pnpm test
       - run: pnpm build
       # Builds the Cloudflare worker and fails if it grows past the free 3 MiB (gzip) limit.
       - name: Cloudflare build and size check

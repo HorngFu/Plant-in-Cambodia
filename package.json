@@ -20,7 +20,9 @@
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
     "cf-build": "opennextjs-cloudflare build",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "validate": "tsx scripts/validate-content.ts",
+    "test": "node --import tsx --test scripts/*.test.ts"
   },
   "dependencies": {
     "@keystatic/core": "^0.6.9",
@@ -29,7 +31,8 @@
     "@opennextjs/cloudflare": "1.20.15",
     "next": "16.4.3",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "server-only": "^0.0.1"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4.3.3",
@@ -41,7 +44,10 @@
     "prettier": "^3.9.10",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
     "typescript": "^5.9.3",
-    "wrangler": "4.156.0"
+    "wrangler": "4.156.0",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
   }
 }

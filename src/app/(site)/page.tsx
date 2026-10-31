@@ -1,4 +1,8 @@
-export default function ComingSoon() {
+import { getFamilies, getPlants } from "@/lib/content";
+
+export default async function ComingSoon() {
+  const [plants, families] = await Promise.all([getPlants(), getFamilies()]);
+
   return (
     <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col justify-center gap-10 px-4 py-16">
       <div className="flex items-center gap-3 text-accent">
@@ -21,6 +25,14 @@ export default function ComingSoon() {
           A free, open list of the plants of Cambodia, in Khmer and English. Coming soon.
         </p>
       </section>
+
+      <p className="text-sm text-muted">
+        <span lang="km">
+          រុក្ខជាតិ {plants.length} ប្រភេទ · អំបូរ {families.length}
+        </span>
+        {" · "}
+        {plants.length} plants and {families.length} families so far
+      </p>
 
       <p className="border-t border-border pt-6 text-sm text-muted">
         Open source on{" "}

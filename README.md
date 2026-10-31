@@ -30,6 +30,8 @@ Open <http://localhost:3000>. The content admin is at <http://localhost:3000/key
 | `pnpm build`      | Next.js production build                                       |
 | `pnpm lint`       | ESLint                                                         |
 | `pnpm typecheck`  | TypeScript check                                               |
+| `pnpm validate`   | Check every file in `content/` (fields, relations, duplicates) |
+| `pnpm test`       | Tests (including the content validator)                        |
 | `pnpm preview`    | Build for Cloudflare and run it in the local Workers runtime   |
 | `pnpm deploy`     | Build and deploy to Cloudflare (CI does this automatically)    |
 
