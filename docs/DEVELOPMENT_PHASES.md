@@ -30,8 +30,8 @@ You can also ask for part of a phase ("Do Phase 3, only the plant detail page") 
 
 | #  | Phase                                         | Who      | Status         |
 |----|-----------------------------------------------|----------|----------------|
-| 0  | Accounts, domain & decisions                  | You      | ⬜ Not started |
-| 1  | Project setup & first deploy                  | Me + you | ⬜ Not started |
+| 0  | Accounts, domain & decisions                  | You      | 🟨 In progress |
+| 1  | Project setup & first deploy                  | Me + you | 🟨 In progress |
 | 2  | Content model & Keystatic (local)             | Me       | ⬜ Not started |
 | 3  | Public website (bilingual)                    | Me       | ⬜ Not started |
 | 4  | Browse, filter & search                       | Me       | ⬜ Not started |
@@ -82,6 +82,10 @@ Status legend: ⬜ Not started · 🟨 In progress · ✅ Done · ⏸️ Paused
 | Data validation      | **Zod** + a validation script run in CI                 | Stops broken or incomplete plant entries from being published                             | Free                                                                          |
 
 > Free-tier numbers change. I'll re-check the current limits at the start of Phase 1.
+>
+> **Phase 1 notes:** pnpm uses `nodeLinker: hoisted` because OpenNext's build creates symlinks that
+> Windows blocks without Developer Mode. Every page is prerendered, so OpenNext uses the
+> static-assets incremental cache (no R2/KV needed).
 
 ### Architecture
 
@@ -124,17 +128,17 @@ example "D1: Khmer default, D2: CC0". Anything you don't change, I'll use as wri
 
 | #   | Question                          | Recommendation                                                                                                     | Your answer |
 |-----|-----------------------------------|--------------------------------------------------------------------------------------------------------------------|-------------|
-| D1  | Languages and default             | Khmer **and** English from day one. URLs `/km/...` and `/en/...`; `/` picks from the browser language, otherwise English | |
-| D2  | Data license                      | **CC BY 4.0** (free use with attribution; matches Kew/GBIF data we'll build on)                                      | |
-| D3  | Code license                      | **MIT**                                                                                                              | |
-| D4  | Which plants                      | **Vascular plants** (ferns, conifers, flowering plants), native **and** introduced/cultivated, clearly labelled. Fungi, mosses and algae later | |
-| D5  | Two levels of entries             | **Yes:** *checklist entries* (name, family, status; thousands, imported) and *full profiles* (description, photos, uses; written by editors) | |
-| D6  | GitHub owner                      | Keep `HorngFu/Plant-in-Cambodia` for now; move to a GitHub **organization** (e.g. `plantincambodia`) before inviting editors. GitHub redirects the old URL | |
-| D7  | Who edits in Keystatic            | You plus a small trusted team (GitHub collaborators). The public suggests changes through a form (Phase 9)          | |
-| D8  | Domain                            | Register `plantincambodia.org` on **Cloudflare Registrar** (or point your current registrar's nameservers to Cloudflare) | |
-| D9  | Sensitive species locations       | **Province level only.** Never publish exact GPS points for threatened or poached species (e.g. rosewoods, orchids)   | |
-| D10 | Look and feel                     | Clean, nature-inspired (forest green, warm neutrals), mobile first. Tell me if you have a logo, colours or sites you like | |
-| D11 | Medicinal and edible info         | Allowed, always with a "not medical advice" note and a source reference. Toxic plants get a clear warning            | |
+| D1  | Languages and default             | Khmer **and** English from day one. URLs `/km/...` and `/en/...`; `/` picks from the browser language, otherwise English | Accepted |
+| D2  | Data license                      | **CC BY 4.0** (free use with attribution; matches Kew/GBIF data we'll build on)                                      | **CC BY 4.0** |
+| D3  | Code license                      | **MIT**                                                                                                              | **MIT** |
+| D4  | Which plants                      | **Vascular plants** (ferns, conifers, flowering plants), native **and** introduced/cultivated, clearly labelled. Fungi, mosses and algae later | Accepted |
+| D5  | Two levels of entries             | **Yes:** *checklist entries* (name, family, status; thousands, imported) and *full profiles* (description, photos, uses; written by editors) | Accepted |
+| D6  | GitHub owner                      | Keep `HorngFu/Plant-in-Cambodia` for now; move to a GitHub **organization** (e.g. `plantincambodia`) before inviting editors. GitHub redirects the old URL | Accepted |
+| D7  | Who edits in Keystatic            | You plus a small trusted team (GitHub collaborators). The public suggests changes through a form (Phase 9)          | Accepted |
+| D8  | Domain                            | Register `plantincambodia.org` on **Cloudflare Registrar** (or point your current registrar's nameservers to Cloudflare) | Accepted (domain not registered yet) |
+| D9  | Sensitive species locations       | **Province level only.** Never publish exact GPS points for threatened or poached species (e.g. rosewoods, orchids)   | Accepted |
+| D10 | Look and feel                     | Clean, nature-inspired (forest green, warm neutrals), mobile first. Tell me if you have a logo, colours or sites you like | Accepted |
+| D11 | Medicinal and edible info         | Allowed, always with a "not medical advice" note and a source reference. Toxic plants get a clear warning            | Accepted |
 
 ---
 
@@ -211,12 +215,12 @@ Plant-in-Cambodia/
 **Goal:** Everything needed before I write code.
 
 **You do**
-- [ ] Answer or accept the decisions in section 4.
-- [ ] Create a free **Cloudflare** account; enable 2FA.
+- [x] Answer or accept the decisions in section 4.
+- [x] Create a free **Cloudflare** account; enable 2FA.
 - [ ] Register **plantincambodia.org** (Cloudflare Registrar recommended), or add the domain to
       Cloudflare and change your registrar's nameservers.
-- [ ] Confirm the GitHub repo `HorngFu/Plant-in-Cambodia` is **public** (or tell me you want it private for now).
-- [ ] Install on your PC: **Node.js LTS** (22 or newer), **Git**, **pnpm** (`npm i -g pnpm`).
+- [x] Confirm the GitHub repo `HorngFu/Plant-in-Cambodia` is **public** (or tell me you want it private for now).
+- [x] Install on your PC: **Node.js LTS** (22 or newer), **Git**, **pnpm** (`npm i -g pnpm`).
 - [ ] Optional: set up **Email Routing** for `contact@plantincambodia.org`.
 
 **Done when:** domain shows "Active" in Cloudflare, decisions are answered, tools installed
@@ -248,7 +252,7 @@ Plant-in-Cambodia/
 - Add the custom domain `plantincambodia.org` (and `www` → redirect) to the worker.
 
 **Done when**
-- [ ] `pnpm dev` runs locally.
+- [x] `pnpm dev` runs locally.
 - [ ] Pushing to `main` deploys automatically.
 - [ ] https://plantincambodia.org shows the placeholder page with valid HTTPS.
 - [ ] CI passes on a test pull request.
@@ -521,3 +525,5 @@ Ask for any item by name, e.g. `Develop Phase 11: R2 photo storage`.
 | Date       | Change                                     |
 |------------|--------------------------------------------|
 | 2026-11-01 | Plan created.                              |
+| 2026-11-01 | Phase 0 started: decisions accepted (CC BY 4.0 data, MIT code), Cloudflare account created, tools installed. Domain still to register. |
+| 2026-11-01 | Phase 1 built: Next.js 16.4 + OpenNext Cloudflare 1.20, Tailwind 4, Keystatic, CI, licenses, deploy guide (`docs/DEPLOYMENT.md`). Worker 1.12 MiB gzip (free limit 3 MiB). Waiting on Cloudflare Git connection and domain. |
