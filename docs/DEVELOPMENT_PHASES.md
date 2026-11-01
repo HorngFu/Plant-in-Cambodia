@@ -32,7 +32,7 @@ You can also ask for part of a phase ("Do Phase 3, only the plant detail page") 
 |----|-----------------------------------------------|----------|----------------|
 | 0  | Accounts, domain & decisions                  | You      | 🟨 In progress |
 | 1  | Project setup & first deploy                  | Me + you | 🟨 In progress |
-| 2  | Content model & Keystatic (local)             | Me       | ⬜ Not started |
+| 2  | Content model & Keystatic (local)             | Me       | ✅ Done        |
 | 3  | Public website (bilingual)                    | Me       | ⬜ Not started |
 | 4  | Browse, filter & search                       | Me       | ⬜ Not started |
 | 5  | Keystatic online (GitHub mode) & editing flow | Me + you | ⬜ Not started |
@@ -142,7 +142,7 @@ example "D1: Khmer default, D2: CC0". Anything you don't change, I'll use as wri
 
 ---
 
-## 5. Data model (draft — finalised in Phase 2)
+## 5. Data model (finalised in Phase 2; full field list in [DATA_DICTIONARY.md](DATA_DICTIONARY.md))
 
 **Collections in Keystatic**
 
@@ -175,7 +175,12 @@ example "D1: Khmer default, D2: CC0". Anything you don't change, I'll use as wri
 - **Trust:** `references[]` → references, `profileLevel` (checklist / full), `reviewStatus`
   (draft / reviewed), `lastReviewed`, `contributors[]`
 
-**File layout:** `content/plants/<slug>/index.yaml` plus one `.mdoc` file per long text field.
+**File layout:** `content/plants/<slug>/index.yaml` plus one `.mdoc` file per long text field and
+language (`description/km.mdoc`, `description/en.mdoc`, ...). Checklist entries can be `index.yaml` only.
+
+**Phase 2 changes from the draft:** `growthForm` became `growthForms` (a plant can be both tree and
+shrub); `toxicity` is a bilingual warning text; `summary` is a short bilingual text in the YAML; the
+`links` fields are grouped under `links`.
 Plain text files keep changes easy to review on GitHub.
 
 ---
@@ -255,7 +260,7 @@ Plant-in-Cambodia/
 - [x] `pnpm dev` runs locally.
 - [ ] Pushing to `main` deploys automatically.
 - [ ] https://plantincambodia.org shows the placeholder page with valid HTTPS.
-- [ ] CI passes on a test pull request.
+- [x] CI passes on a test pull request.
 
 **Ask me with:** `Develop Phase 1 from docs/DEVELOPMENT_PHASES.md`
 
@@ -275,9 +280,9 @@ Plant-in-Cambodia/
 - `docs/DATA_DICTIONARY.md` explaining every field in plain language.
 
 **Done when**
-- [ ] You can create, edit and delete a plant in the local Keystatic admin.
-- [ ] Changes appear as readable files in `content/`.
-- [ ] `pnpm validate` catches a deliberately broken entry.
+- [x] You can create, edit and delete a plant in the local Keystatic admin.
+- [x] Changes appear as readable files in `content/`.
+- [x] `pnpm validate` catches a deliberately broken entry.
 
 **Ask me with:** `Develop Phase 2 from docs/DEVELOPMENT_PHASES.md`
 
@@ -527,3 +532,5 @@ Ask for any item by name, e.g. `Develop Phase 11: R2 photo storage`.
 | 2026-11-01 | Plan created.                              |
 | 2026-11-01 | Phase 0 started: decisions accepted (CC BY 4.0 data, MIT code), Cloudflare account created, tools installed. Domain still to register. |
 | 2026-11-01 | Phase 1 built: Next.js 16.4 + OpenNext Cloudflare 1.20, Tailwind 4, Keystatic, CI, licenses, deploy guide (`docs/DEPLOYMENT.md`). Worker 1.12 MiB gzip (free limit 3 MiB). Waiting on Cloudflare Git connection and domain. |
+| 2026-11-01 | Phase 2 done: Keystatic content model (7 collections), seed data (25 provinces, 17 habitats, 20 families, 10 sample plants, 3 pages), typed readers, `pnpm validate` + tests in CI, `docs/DATA_DICTIONARY.md`. Khmer texts for plants still to be written. |
+| 2026-11-01 | Phase 1: PR #1 merged with CI green; first deploy live at https://plant-in-cambodia.horngfu.workers.dev; Workers Builds connected to GitHub. Waiting on the domain. |

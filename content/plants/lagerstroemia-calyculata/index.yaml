@@ -1,0 +1,47 @@
+scientificName: Lagerstroemia calyculata
+author: Kurz
+rank: species
+family: lythraceae
+genus: Lagerstroemia
+synonyms: []
+khmerName: ស្រឡៅ
+khmerNameLatin: Sralao
+englishName: Crape myrtle
+otherLocalNames: []
+growthForms:
+  - tree
+originStatus: native
+iucnStatus: NE
+provinces:
+  - kampong-thom
+  - preah-vihear
+  - siem-reap
+  - stung-treng
+  - kratie
+  - mondulkiri
+  - ratanakiri
+habitats:
+  - mixed-deciduous-forest
+  - semi-evergreen-forest
+isSensitive: false
+floweringMonths:
+  - "4"
+  - "5"
+  - "6"
+fruitingMonths: []
+uses:
+  - timber
+toxicity: {}
+summary:
+  en: A tall forest tree with smooth, pale, peeling bark and clusters of small white flowers. Valued for its hard timber.
+description: {}
+identification: {}
+usesNotes: {}
+images: []
+links: {}
+references:
+  - powo
+profileLevel: full
+reviewStatus: draft
+contributors:
+  - plant-in-cambodia-team

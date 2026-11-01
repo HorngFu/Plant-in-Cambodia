@@ -31,6 +31,8 @@ pnpm install
 pnpm dev          # http://localhost:3000 (Keystatic admin at /keystatic)
 pnpm lint
 pnpm typecheck
+pnpm validate     # check all content files (see docs/DATA_DICTIONARY.md)
+pnpm test
 pnpm preview      # run the production build in the local Cloudflare Workers runtime
 ```
 

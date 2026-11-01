@@ -1,0 +1,44 @@
+scientificName: Afzelia xylocarpa
+author: (Kurz) Craib
+rank: species
+family: fabaceae
+genus: Afzelia
+synonyms: []
+khmerName: បេង
+khmerNameLatin: Beng
+englishName: Makha tree
+otherLocalNames: []
+growthForms:
+  - tree
+originStatus: native
+iucnStatus: EN
+provinces:
+  - kampong-thom
+  - preah-vihear
+  - stung-treng
+  - mondulkiri
+  - ratanakiri
+  - kratie
+habitats:
+  - deciduous-dipterocarp-forest
+  - mixed-deciduous-forest
+isSensitive: true
+floweringMonths: []
+fruitingMonths: []
+uses:
+  - timber
+toxicity: {}
+summary:
+  en: A large deciduous tree of dry forests with prized, heavy timber and thick woody pods holding black seeds with a bright orange-red aril.
+description: {}
+identification: {}
+usesNotes: {}
+images: []
+links: {}
+references:
+  - powo
+  - iucn-red-list
+profileLevel: full
+reviewStatus: draft
+contributors:
+  - plant-in-cambodia-team

@@ -1,0 +1,48 @@
+scientificName: Dipterocarpus alatus
+author: Roxb. ex G.Don
+rank: species
+family: dipterocarpaceae
+genus: Dipterocarpus
+synonyms: []
+khmerName: ឈើទាល
+khmerNameLatin: Chheuteal
+englishName: Yang
+otherLocalNames: []
+growthForms:
+  - tree
+originStatus: native
+iucnStatus: VU
+provinces:
+  - kampong-thom
+  - kampong-cham
+  - kratie
+  - stung-treng
+  - siem-reap
+  - preah-vihear
+  - pursat
+habitats:
+  - semi-evergreen-forest
+  - riverbank
+  - farmland-and-rice-fields
+isSensitive: true
+floweringMonths: []
+fruitingMonths: []
+uses:
+  - timber
+  - other
+toxicity: {}
+summary:
+  en: A very tall dipterocarp tree with a straight trunk, tapped for an oily resin used to seal boats and make torches.
+description: {}
+identification: {}
+usesNotes: {}
+images: []
+links: {}
+references:
+  - powo
+  - iucn-red-list
+  - dy-phon-2000
+profileLevel: full
+reviewStatus: draft
+contributors:
+  - plant-in-cambodia-team

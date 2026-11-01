@@ -20,19 +20,25 @@ You only need to do this once.
    | Production branch                   | `main`                                  |
    | Build command                       | `pnpm run cf-build`                     |
    | Deploy command                      | `pnpm exec opennextjs-cloudflare deploy` |
-   | Non-production branch deploy command | `pnpm exec opennextjs-cloudflare upload` |
+   | Non-production branch deploy command | `npx wrangler preview` (Cloudflare's default; uses the `previews` block in `wrangler.jsonc`) |
    | Root directory                      | `/`                                     |
 
 5. Open **Advanced settings → Build variables** and add `NODE_VERSION` = `22`.
    (The repo also has a `.node-version` file; this makes it explicit.)
 6. Click **Create and deploy**. The first build takes a few minutes. When it's done you get a URL
    like `https://plant-in-cambodia.<your-subdomain>.workers.dev`.
+   (Ours: <https://plant-in-cambodia.horngfu.workers.dev>.)
 7. In the Worker's **Settings → Build**, check that **Builds for non-production branches** is on,
    and in **Settings → Domains & Routes** that **Preview URLs** is enabled. Branch pushes then get
    their own preview URL, shown on the pull request.
 
 > If the build fails while installing pnpm, add the build variable `PNPM_VERSION` = `12.16.1`
 > (the version in `package.json` → `packageManager`).
+
+> If **Settings → Build** says *"This project is disconnected from your Git account"*, pushes won't
+> trigger builds. Click **Manage** (or **Disconnect** then **Connect**), sign in to GitHub as the
+> repo owner (`HorngFu`) and give the **Cloudflare Workers and Pages** app access to this repo.
+> Builds only start on the next push after connecting.
 
 ## 2. Add the custom domain
 
