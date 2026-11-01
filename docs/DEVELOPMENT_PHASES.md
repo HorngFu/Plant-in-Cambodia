@@ -258,7 +258,7 @@ Plant-in-Cambodia/
 
 **Done when**
 - [x] `pnpm dev` runs locally.
-- [ ] Pushing to `main` deploys automatically.
+- [x] Pushing to `main` deploys automatically.
 - [ ] https://plantincambodia.org shows the placeholder page with valid HTTPS.
 - [x] CI passes on a test pull request.
 
@@ -534,3 +534,4 @@ Ask for any item by name, e.g. `Develop Phase 11: R2 photo storage`.
 | 2026-11-01 | Phase 1 built: Next.js 16.4 + OpenNext Cloudflare 1.20, Tailwind 4, Keystatic, CI, licenses, deploy guide (`docs/DEPLOYMENT.md`). Worker 1.12 MiB gzip (free limit 3 MiB). Waiting on Cloudflare Git connection and domain. |
 | 2026-11-01 | Phase 2 done: Keystatic content model (7 collections), seed data (25 provinces, 17 habitats, 20 families, 10 sample plants, 3 pages), typed readers, `pnpm validate` + tests in CI, `docs/DATA_DICTIONARY.md`. Khmer texts for plants still to be written. |
 | 2026-11-01 | Phase 1: PR #1 merged with CI green; first deploy live at https://plant-in-cambodia.horngfu.workers.dev; Workers Builds connected to GitHub. Waiting on the domain. |
+| 2026-11-02 | Phase 2 merged (PR #2). Cloudflare Workers Builds now deploys `main` automatically and builds a preview for every branch. Fixed branch previews: added a `previews` block and made `cf-build` ship the prerendered pages. Phase 1 waits only on the domain. |
