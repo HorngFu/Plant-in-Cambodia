@@ -35,6 +35,11 @@ You only need to do this once.
 > If the build fails while installing pnpm, add the build variable `PNPM_VERSION` = `12.16.1`
 > (the version in `package.json` → `packageManager`).
 
+> If **Settings → Build** says *"This project is disconnected from your Git account"*, pushes won't
+> trigger builds. Click **Manage** (or **Disconnect** then **Connect**), sign in to GitHub as the
+> repo owner (`HorngFu`) and give the **Cloudflare Workers and Pages** app access to this repo.
+> Builds only start on the next push after connecting.
+
 ## 2. Add the custom domain
 
 This needs `plantincambodia.org` to be **Active** in your Cloudflare account first
