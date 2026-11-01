@@ -1,0 +1,2 @@
+# Copy to .dev.vars (git-ignored) for `pnpm preview`. Never commit real secrets.
+NEXTJS_ENV=development

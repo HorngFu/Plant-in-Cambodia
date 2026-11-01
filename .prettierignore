@@ -1,0 +1,11 @@
+pnpm-lock.yaml
+pnpm-workspace.yaml
+.next/
+.open-next/
+.wrangler/
+public/data/
+cloudflare-env.d.ts
+docs/
+content/
+*.md
+.wrangler-dry/
