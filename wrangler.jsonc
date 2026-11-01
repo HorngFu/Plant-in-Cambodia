@@ -18,4 +18,7 @@
   "observability": {
     "enabled": true,
   },
+  // Branch builds run `wrangler preview`, which needs this block. Service bindings aren't copied
+  // into previews; the prerendered site doesn't need WORKER_SELF_REFERENCE there.
+  "previews": {},
 }

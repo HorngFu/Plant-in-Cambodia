@@ -20,7 +20,7 @@ You only need to do this once.
    | Production branch                   | `main`                                  |
    | Build command                       | `pnpm run cf-build`                     |
    | Deploy command                      | `pnpm exec opennextjs-cloudflare deploy` |
-   | Non-production branch deploy command | `pnpm exec opennextjs-cloudflare upload` |
+   | Non-production branch deploy command | `npx wrangler preview` (Cloudflare's default; uses the `previews` block in `wrangler.jsonc`) |
    | Root directory                      | `/`                                     |
 
 5. Open **Advanced settings → Build variables** and add `NODE_VERSION` = `22`.
