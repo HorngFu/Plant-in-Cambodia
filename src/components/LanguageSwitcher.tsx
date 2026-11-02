@@ -1,9 +1,13 @@
 "use client";
 
-import { Link, usePathname } from "@/i18n/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { Locale } from "@/i18n/routing";
 
-/** Links to the same page in the other language. */
+/**
+ * Links to the same page in the other language. Uses Next's own router hooks rather than
+ * next-intl's client navigation, so next-intl stays out of the browser bundle.
+ */
 export function LanguageSwitcher({
   locale,
   label,
@@ -15,11 +19,11 @@ export function LanguageSwitcher({
 }) {
   const pathname = usePathname();
   const other: Locale = locale === "km" ? "en" : "km";
+  const href = pathname.replace(new RegExp(`^/${locale}(?=/|$)`), `/${other}`);
 
   return (
     <Link
-      href={pathname}
-      locale={other}
+      href={href}
       hrefLang={other}
       lang={other}
       aria-label={ariaLabel}

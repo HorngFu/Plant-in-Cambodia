@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { kantumruy } from "./fonts";
 import { LeafIcon } from "@/components/icons";
 import "./globals.css";
 
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
 /** 404 for URLs outside /km and /en, in both languages. */
 export default function GlobalNotFound() {
   return (
-    <html lang="en" className={`${kantumruy.variable} h-full antialiased`}>
+    <html lang="en" className="h-full antialiased">
       <body className="flex min-h-full flex-col font-sans">
         <main className="mx-auto flex w-full max-w-md flex-1 flex-col items-center justify-center gap-6 px-4 py-16 text-center">
           <LeafIcon className="size-12 text-accent" />

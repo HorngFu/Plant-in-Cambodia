@@ -1,4 +1,4 @@
-import { Link } from "@/i18n/navigation";
+import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { Locale } from "@/i18n/routing";
 import type { Plant } from "@/lib/content";
 import { commonName, pick } from "@/lib/localize";
@@ -33,6 +33,7 @@ export function PlantCard({
       <div className="flex flex-1 flex-col gap-2 p-4">
         <Heading className="flex flex-col">
           <Link
+            locale={locale}
             href={`/plants/${plant.slug}`}
             className="text-lg font-semibold text-foreground group-hover:text-accent after:absolute after:inset-0"
           >

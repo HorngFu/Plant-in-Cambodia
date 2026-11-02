@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
+import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { Locale } from "@/i18n/routing";
 import { REPO_URL } from "@/lib/site";
 
@@ -13,17 +13,21 @@ export async function SiteFooter({ locale }: { locale: Locale }) {
         <p className="rounded-md bg-warn-bg px-3 py-2 text-warn-fg">{t("draft")}</p>
         <ul className="flex flex-wrap gap-x-5 gap-y-2">
           <li>
-            <Link href="/about" className="hover:text-foreground hover:underline">
+            <Link locale={locale} href="/about" className="hover:text-foreground hover:underline">
               {nav("about")}
             </Link>
           </li>
           <li>
-            <Link href="/contribute" className="hover:text-foreground hover:underline">
+            <Link
+              locale={locale}
+              href="/contribute"
+              className="hover:text-foreground hover:underline"
+            >
               {nav("contribute")}
             </Link>
           </li>
           <li>
-            <Link href="/license" className="hover:text-foreground hover:underline">
+            <Link locale={locale} href="/license" className="hover:text-foreground hover:underline">
               {nav("license")}
             </Link>
           </li>

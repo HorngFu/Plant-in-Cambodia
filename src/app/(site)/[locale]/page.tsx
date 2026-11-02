@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PlantCard, PlantGrid } from "@/components/PlantCard";
 import { SearchForm } from "@/components/SearchForm";
-import { Link } from "@/i18n/navigation";
+import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { Locale } from "@/i18n/routing";
 import { getFamilies, getPlants } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
@@ -57,7 +57,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <section className="mx-auto max-w-6xl px-4 py-12">
         <div className="mb-6 flex flex-wrap items-baseline justify-between gap-2">
           <h2 className="text-2xl font-bold">{t("featured")}</h2>
-          <Link href="/plants" className="font-medium text-accent hover:underline">
+          <Link locale={locale} href="/plants" className="font-medium text-accent hover:underline">
             {t("browseAll")} →
           </Link>
         </div>
@@ -74,25 +74,43 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <h2 className="mb-6 text-2xl font-bold">{t("browse")}</h2>
         <div className="grid gap-4 sm:grid-cols-3">
           <BrowseLink
+            locale={locale}
             href="/families"
             title={t("browseFamilies")}
             text={`${t("browseFamiliesText")} (${families.length})`}
           />
           <BrowseLink
+            locale={locale}
             href="/provinces"
             title={t("browseProvinces")}
             text={t("browseProvincesText")}
           />
-          <BrowseLink href="/contribute" title={t("aboutTitle")} text={t("aboutText")} />
+          <BrowseLink
+            locale={locale}
+            href="/contribute"
+            title={t("aboutTitle")}
+            text={t("aboutText")}
+          />
         </div>
       </section>
     </>
   );
 }
 
-function BrowseLink({ href, title, text }: { href: string; title: string; text: string }) {
+function BrowseLink({
+  href,
+  title,
+  text,
+  locale,
+}: {
+  href: string;
+  title: string;
+  text: string;
+  locale: Locale;
+}) {
   return (
     <Link
+      locale={locale}
       href={href}
       className="flex flex-col gap-1 rounded-xl border border-border bg-surface p-5 hover:border-accent"
     >

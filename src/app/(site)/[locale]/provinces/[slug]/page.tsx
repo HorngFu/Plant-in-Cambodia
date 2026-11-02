@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { PlantCard, PlantGrid } from "@/components/PlantCard";
-import { Link } from "@/i18n/navigation";
+import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { Locale } from "@/i18n/routing";
 import { getPlantsBy, getProvinces } from "@/lib/content";
 import { placeName } from "@/lib/localize";
@@ -54,7 +54,7 @@ export default async function ProvincePage({ params }: Props) {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
       <nav aria-label="Breadcrumb" className="mb-4 text-sm text-muted">
-        <Link href="/provinces" className="hover:underline">
+        <Link locale={locale} href="/provinces" className="hover:underline">
           {nav("provinces")}
         </Link>
       </nav>

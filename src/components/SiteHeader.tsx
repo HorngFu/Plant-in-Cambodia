@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
+import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { Locale } from "@/i18n/routing";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { LeafIcon } from "./icons";
@@ -24,7 +24,11 @@ export async function SiteHeader({ locale }: { locale: Locale }) {
         {t("skip")}
       </a>
       <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3">
-        <Link href="/" className="flex items-center gap-2 font-bold text-accent-strong">
+        <Link
+          locale={locale}
+          href="/"
+          className="flex items-center gap-2 font-bold text-accent-strong"
+        >
           <LeafIcon className="size-7 text-accent" />
           <span className="text-lg">{site("name")}</span>
         </Link>
@@ -33,6 +37,7 @@ export async function SiteHeader({ locale }: { locale: Locale }) {
             {links.map((link) => (
               <li key={link.href}>
                 <Link
+                  locale={locale}
                   href={link.href}
                   className="block rounded px-2 py-2 text-muted hover:bg-accent-soft hover:text-foreground"
                 >

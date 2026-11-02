@@ -67,7 +67,11 @@
   --color-neutral-fg: var(--neutral-fg);
   --color-info-bg: var(--info-bg);
   --color-info-fg: var(--info-fg);
-  --font-sans: var(--font-kantumruy), system-ui, sans-serif;
+  /* System fonts only (no download): Latin from the platform UI font, which has no Khmer glyphs,
+     so Khmer falls through to the platform's Khmer font (Noto Sans Khmer on Android). */
+  --font-sans:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Khmer", "Khmer UI", "Khmer Sangam MN",
+    "Khmer MN", "Leelawadee UI", sans-serif;
 }
 
 body {

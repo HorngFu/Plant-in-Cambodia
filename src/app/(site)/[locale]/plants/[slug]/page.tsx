@@ -6,7 +6,7 @@ import { ExternalIcon, ShieldIcon, WarningIcon } from "@/components/icons";
 import { LocalizedText } from "@/components/LocalizedText";
 import { MarkdocContent, pickDoc } from "@/components/MarkdocContent";
 import { MonthCalendar } from "@/components/MonthCalendar";
-import { Link } from "@/i18n/navigation";
+import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { Locale } from "@/i18n/routing";
 import { getLookups, getPlant, getPlants, type Plant } from "@/lib/content";
 import { IMAGE_LICENSES } from "@/lib/content/vocab";
@@ -66,13 +66,13 @@ export default async function PlantPage({ params }: Props) {
       <JsonLd plant={plant} familyName={family?.name} url={pageUrl} />
 
       <nav aria-label="Breadcrumb" className="mb-4 text-sm text-muted">
-        <Link href="/plants" className="hover:underline">
+        <Link locale={locale} href="/plants" className="hover:underline">
           {(await getTranslations({ locale, namespace: "nav" }))("plants")}
         </Link>
         {family && (
           <>
             {" / "}
-            <Link href={`/families/${family.slug}`} className="hover:underline">
+            <Link locale={locale} href={`/families/${family.slug}`} className="hover:underline">
               {family.name}
             </Link>
           </>
@@ -132,6 +132,7 @@ export default async function PlantPage({ params }: Props) {
             <div className="rounded-lg border border-dashed border-border p-4 text-muted">
               <p>{t("checklistNote")}</p>
               <Link
+                locale={locale}
                 href="/contribute"
                 className="mt-1 inline-block font-medium text-accent hover:underline"
               >
@@ -262,7 +263,11 @@ export default async function PlantPage({ params }: Props) {
             <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">
               <Fact label={t("family")}>
                 {family ? (
-                  <Link href={`/families/${family.slug}`} className="text-accent hover:underline">
+                  <Link
+                    locale={locale}
+                    href={`/families/${family.slug}`}
+                    className="text-accent hover:underline"
+                  >
                     {family.name}
                   </Link>
                 ) : (
@@ -320,6 +325,7 @@ export default async function PlantPage({ params }: Props) {
                     return (
                       <li key={slug}>
                         <Link
+                          locale={locale}
                           href={`/provinces/${slug}`}
                           lang={label.lang}
                           className="inline-block rounded-full border border-border px-2.5 py-0.5 text-sm hover:border-accent hover:text-accent"

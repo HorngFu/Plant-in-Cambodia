@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LocalizedText } from "@/components/LocalizedText";
 import { PlantCard, PlantGrid } from "@/components/PlantCard";
-import { Link } from "@/i18n/navigation";
+import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { Locale } from "@/i18n/routing";
 import { getFamilies, getPlantsBy } from "@/lib/content";
 import { pick } from "@/lib/localize";
@@ -56,7 +56,7 @@ export default async function FamilyPage({ params }: Props) {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
       <nav aria-label="Breadcrumb" className="mb-4 text-sm text-muted">
-        <Link href="/families" className="hover:underline">
+        <Link locale={locale} href="/families" className="hover:underline">
           {nav("families")}
         </Link>
       </nav>

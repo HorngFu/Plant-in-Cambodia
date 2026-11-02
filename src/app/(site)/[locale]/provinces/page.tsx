@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
+import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { Locale } from "@/i18n/routing";
 import { getPlants, getProvinces } from "@/lib/content";
 import { placeName } from "@/lib/localize";
@@ -45,6 +45,7 @@ export default async function ProvincesPage({ params }: PageProps<"/[locale]/pro
           return (
             <li key={p.slug}>
               <Link
+                locale={locale}
                 href={`/provinces/${p.slug}`}
                 className="flex h-full flex-col rounded-xl border border-border bg-surface p-4 hover:border-accent"
               >

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
+import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { Locale } from "@/i18n/routing";
 import { getFamilies, getPlants } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
@@ -35,6 +35,7 @@ export default async function FamiliesPage({ params }: PageProps<"/[locale]/fami
           return (
             <li key={f.slug}>
               <Link
+                locale={locale}
                 href={`/families/${f.slug}`}
                 className="flex h-full flex-col rounded-xl border border-border bg-surface p-4 hover:border-accent"
               >

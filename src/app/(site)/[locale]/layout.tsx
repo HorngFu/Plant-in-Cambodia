@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
-import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import { kantumruy } from "@/app/fonts";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { routing } from "@/i18n/routing";
@@ -35,16 +34,13 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={`${kantumruy.variable} h-full antialiased`}>
+    <html lang={locale} className="h-full antialiased">
       <body className="flex min-h-full flex-col font-sans">
-        {/* Client components get their text as props; they only need the locale from here. */}
-        <NextIntlClientProvider messages={null}>
-          <SiteHeader locale={locale} />
-          <main id="main" className="flex-1">
-            {children}
-          </main>
-          <SiteFooter locale={locale} />
-        </NextIntlClientProvider>
+        <SiteHeader locale={locale} />
+        <main id="main" className="flex-1">
+          {children}
+        </main>
+        <SiteFooter locale={locale} />
       </body>
     </html>
   );

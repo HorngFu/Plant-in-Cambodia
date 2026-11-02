@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { kantumruy } from "@/app/fonts";
 import { SITE_URL } from "@/lib/site";
 import "../globals.css";
 
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${kantumruy.variable} h-full antialiased`}>
+    <html lang="en" className="h-full antialiased">
       <body className="flex min-h-full flex-col font-sans">{children}</body>
     </html>
   );
