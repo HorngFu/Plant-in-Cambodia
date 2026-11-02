@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { Locale } from "@/i18n/routing";
-import { getPlants, getProvinces } from "@/lib/content";
+import { getPlantList, getProvinces } from "@/lib/content";
 import { placeName } from "@/lib/localize";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -23,7 +23,7 @@ export default async function ProvincesPage({ params }: PageProps<"/[locale]/pro
   const locale = (await params).locale as Locale;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "provinces" });
-  const [provinces, plants] = await Promise.all([getProvinces(), getPlants()]);
+  const [provinces, plants] = await Promise.all([getProvinces(), getPlantList()]);
   const counts = new Map<string, number>();
   for (const p of plants)
     for (const slug of p.provinces) counts.set(slug, (counts.get(slug) ?? 0) + 1);

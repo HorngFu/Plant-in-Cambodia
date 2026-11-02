@@ -8,7 +8,7 @@ import { MarkdocContent, pickDoc } from "@/components/MarkdocContent";
 import { MonthCalendar } from "@/components/MonthCalendar";
 import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { Locale } from "@/i18n/routing";
-import { getLookups, getPlant, getPlants, type Plant } from "@/lib/content";
+import { getLookups, getPlant, getPlantList, type Plant } from "@/lib/content";
 import { IMAGE_LICENSES } from "@/lib/content/vocab";
 import { commonName, pick, placeName, plantTitle } from "@/lib/localize";
 import { pageMetadata, truncate } from "@/lib/metadata";
@@ -19,7 +19,7 @@ type Props = PageProps<"/[locale]/plants/[slug]">;
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  return (await getPlants()).map((p) => ({ slug: p.slug }));
+  return (await getPlantList()).map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

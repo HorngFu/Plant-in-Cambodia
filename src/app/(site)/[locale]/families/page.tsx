@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { Locale } from "@/i18n/routing";
-import { getFamilies, getPlants } from "@/lib/content";
+import { getFamilies, getPlantList } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
 
 export async function generateMetadata({
@@ -22,7 +22,7 @@ export default async function FamiliesPage({ params }: PageProps<"/[locale]/fami
   const locale = (await params).locale as Locale;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "families" });
-  const [families, plants] = await Promise.all([getFamilies(), getPlants()]);
+  const [families, plants] = await Promise.all([getFamilies(), getPlantList()]);
   const counts = new Map<string, number>();
   for (const p of plants) counts.set(p.family, (counts.get(p.family) ?? 0) + 1);
 
