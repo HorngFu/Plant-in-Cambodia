@@ -39,7 +39,9 @@ Open <http://localhost:3000>. The content admin is at <http://localhost:3000/key
 
 ```text
 content/            plant data (YAML + Markdoc), edited in Keystatic or by hand
-src/app/            Next.js routes (public site, /keystatic admin, /api/keystatic)
+src/app/            Next.js routes (/km and /en public site, /keystatic admin, /api/keystatic)
+src/components/     UI components
+messages/           interface text in Khmer (km.json) and English (en.json)
 src/lib/content/    typed readers over content/ (build time only)
 scripts/            validation and data tools
 docs/               plan, data dictionary

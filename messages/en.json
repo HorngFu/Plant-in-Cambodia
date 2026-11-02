@@ -1,0 +1,192 @@
+{
+  "site": {
+    "name": "Plant in Cambodia",
+    "tagline": "An open list of the plants of Cambodia",
+    "description": "A free, open list of the plants of Cambodia in Khmer and English: names, families, where they grow, uses and conservation status, with sources."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "menu": "Main menu",
+    "home": "Home",
+    "plants": "Plants",
+    "families": "Families",
+    "provinces": "Provinces",
+    "about": "About",
+    "contribute": "Contribute",
+    "license": "License and data use",
+    "switchLanguage": "ភាសាខ្មែរ",
+    "switchLanguageLabel": "Read this page in Khmer"
+  },
+  "footer": {
+    "license": "Data under CC BY 4.0. Code under the MIT License.",
+    "source": "Open source on GitHub",
+    "draft": "This site is in development. Plant information is a draft and still being reviewed."
+  },
+  "home": {
+    "title": "The plants of Cambodia, in Khmer and English",
+    "intro": "A free, open list of Cambodia's plants: scientific and local names, where they grow, how people use them and how threatened they are. Every fact has a source, and all the data can be downloaded and reused.",
+    "searchLabel": "Search plants",
+    "searchPlaceholder": "Khmer, English or scientific name",
+    "searchButton": "Search",
+    "statPlants": "{count, plural, one {species} other {species}}",
+    "statFamilies": "{count, plural, one {family} other {families}}",
+    "statPhotos": "{count, plural, one {photo} other {photos}}",
+    "featured": "Featured plants",
+    "browseAll": "Browse all plants",
+    "browse": "Browse",
+    "browseFamilies": "By family",
+    "browseFamiliesText": "Plants grouped by botanical family.",
+    "browseProvinces": "By province",
+    "browseProvincesText": "Plants recorded in each of Cambodia's 25 provinces.",
+    "aboutTitle": "An open project",
+    "aboutText": "Plant in Cambodia is run by volunteers. Anyone can suggest corrections, local names and photos.",
+    "aboutLink": "How to contribute"
+  },
+  "plants": {
+    "title": "Plants",
+    "description": "All plants in Plant in Cambodia, with Khmer, English and scientific names.",
+    "count": "{count, plural, one {# plant} other {# plants}}",
+    "filterLabel": "Filter by name",
+    "filterPlaceholder": "Type a Khmer, English or scientific name",
+    "noResults": "No plants match “{query}”.",
+    "showing": "{shown} of {total}"
+  },
+  "plant": {
+    "family": "Family",
+    "genus": "Genus",
+    "rank": "Rank",
+    "growthForm": "Growth form",
+    "origin": "Origin in Cambodia",
+    "iucn": "IUCN Red List",
+    "elevation": "Elevation",
+    "elevationRange": "{min}–{max} m",
+    "otherNames": "Other local names",
+    "synonyms": "Synonyms",
+    "facts": "Key facts",
+    "description": "Description",
+    "identification": "How to identify",
+    "uses": "Uses",
+    "medicalDisclaimer": "This is not medical advice. Ask a doctor or qualified health worker before using any plant as medicine.",
+    "toxicity": "Warning: poisonous",
+    "where": "Where it grows",
+    "provinces": "Provinces",
+    "habitats": "Habitats",
+    "sensitive": "This species is threatened or collected illegally. To protect it, we only show where it grows at province level.",
+    "calendar": "Flowering and fruiting",
+    "flowering": "Flowering",
+    "fruiting": "Fruiting",
+    "noCalendar": "No flowering or fruiting dates recorded yet.",
+    "photos": "Photos",
+    "photoCredit": "Photo: {author} · {license}",
+    "references": "References",
+    "links": "In other databases",
+    "searchIn": "Search {name}",
+    "checklistNote": "This is a checklist entry: only the names and basic facts are known so far.",
+    "helpWrite": "Help write this profile",
+    "draft": "Draft: not yet reviewed by a second editor.",
+    "reviewed": "Reviewed on {date}.",
+    "suggestEdit": "Suggest an edit",
+    "editFile": "Edit the data on GitHub",
+    "cite": "How to cite this page",
+    "notTranslated": "Not yet translated into Khmer.",
+    "unknown": "Not recorded"
+  },
+  "families": {
+    "title": "Plant families",
+    "description": "Plant families in Plant in Cambodia and the plants in each.",
+    "order": "Order",
+    "plantCount": "{count, plural, =0 {No plants yet} one {# plant} other {# plants}}",
+    "plantsIn": "Plants in this family"
+  },
+  "provinces": {
+    "title": "Provinces",
+    "description": "Cambodia's 25 provinces and the plants recorded in each.",
+    "plantCount": "{count, plural, =0 {No plants yet} one {# plant} other {# plants}}",
+    "plantsIn": "Plants recorded in {name}",
+    "isoCode": "ISO code",
+    "sensitiveNote": "Threatened species are listed here, but we never publish more exact locations."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "We couldn't find that page. It may have moved, or the address may be wrong.",
+    "home": "Go to the home page"
+  },
+  "vocab": {
+    "rank": {
+      "species": "Species",
+      "subspecies": "Subspecies",
+      "variety": "Variety",
+      "form": "Form"
+    },
+    "growthForm": {
+      "tree": "Tree",
+      "shrub": "Shrub",
+      "herb": "Herb",
+      "climber": "Climber",
+      "palm": "Palm",
+      "bamboo": "Bamboo",
+      "grass": "Grass or sedge",
+      "fern": "Fern",
+      "aquatic": "Aquatic",
+      "epiphyte": "Epiphyte"
+    },
+    "origin": {
+      "native": "Native",
+      "endemic": "Endemic",
+      "introduced": "Introduced",
+      "naturalised": "Naturalised",
+      "invasive": "Invasive",
+      "cultivated": "Cultivated"
+    },
+    "iucn": {
+      "NE": "Not Evaluated",
+      "DD": "Data Deficient",
+      "LC": "Least Concern",
+      "NT": "Near Threatened",
+      "VU": "Vulnerable",
+      "EN": "Endangered",
+      "CR": "Critically Endangered",
+      "EW": "Extinct in the Wild",
+      "EX": "Extinct"
+    },
+    "use": {
+      "food": "Food",
+      "medicine": "Medicine",
+      "timber": "Timber",
+      "fibre": "Fibre",
+      "ornamental": "Ornamental",
+      "ritual": "Ritual or religious",
+      "fodder": "Fodder",
+      "dye": "Dye",
+      "other": "Other"
+    },
+    "month": {
+      "1": "January",
+      "2": "February",
+      "3": "March",
+      "4": "April",
+      "5": "May",
+      "6": "June",
+      "7": "July",
+      "8": "August",
+      "9": "September",
+      "10": "October",
+      "11": "November",
+      "12": "December"
+    },
+    "monthShort": {
+      "1": "Jan",
+      "2": "Feb",
+      "3": "Mar",
+      "4": "Apr",
+      "5": "May",
+      "6": "Jun",
+      "7": "Jul",
+      "8": "Aug",
+      "9": "Sep",
+      "10": "Oct",
+      "11": "Nov",
+      "12": "Dec"
+    }
+  }
+}

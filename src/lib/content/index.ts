@@ -83,7 +83,9 @@ export const getPage = cache(async (slug: string): Promise<Page | null> => {
   return entry ? { slug, ...entry } : null;
 });
 
-/** Plants in a family, province or habitat (for the Phase 3 listing pages). */
+export const getPageSlugs = cache(async (): Promise<string[]> => reader().collections.pages.list());
+
+/** Plants in a family, province or habitat. */
 export async function getPlantsBy(
   field: "family" | "provinces" | "habitats",
   slug: string,

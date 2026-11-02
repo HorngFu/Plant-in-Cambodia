@@ -33,7 +33,7 @@ You can also ask for part of a phase ("Do Phase 3, only the plant detail page") 
 | 0  | Accounts, domain & decisions                  | You      | 🟨 In progress |
 | 1  | Project setup & first deploy                  | Me + you | 🟨 In progress |
 | 2  | Content model & Keystatic (local)             | Me       | ✅ Done        |
-| 3  | Public website (bilingual)                    | Me       | ⬜ Not started |
+| 3  | Public website (bilingual)                    | Me       | 🟨 In progress |
 | 4  | Browse, filter & search                       | Me       | ⬜ Not started |
 | 5  | Keystatic online (GitHub mode) & editing flow | Me + you | ⬜ Not started |
 | 6  | Cambodia checklist import                     | Me       | ⬜ Not started |
@@ -71,7 +71,7 @@ Status legend: ⬜ Not started · 🟨 In progress · ✅ Done · ⏸️ Paused
 | Hosting              | **Cloudflare Workers** via the **OpenNext** adapter     | Cloudflare's recommended way to run Next.js; static files are served free and unlimited   | 100k worker requests/day; static assets unlimited                             |
 | Domain & DNS         | **Cloudflare Registrar + DNS**                          | .org sold at cost, DNS and SSL free, everything in one dashboard                          | DNS/SSL free; domain ~$10–11/yr                                               |
 | Styling              | **Tailwind CSS**                                        | Fast to build, small CSS output                                                           | Free                                                                          |
-| Khmer + English      | **next-intl**, fonts **Kantumruy Pro** / **Noto Sans Khmer** | Mature i18n for the App Router; good Khmer web fonts                                 | Free                                                                          |
+| Khmer + English      | **next-intl**, **system fonts** (Noto Sans Khmer on Android, Khmer UI on Windows, Khmer Sangam on Apple) | Mature i18n for the App Router. No web font: chosen in Phase 3 because Kantumruy Pro cost ~0.5 s LCP on slow phones | Free                                                                          |
 | Search               | Build-time JSON index + **Orama** or **FlexSearch** in the browser | No server needed; works offline; handles thousands of plants                   | Free                                                                          |
 | Maps                 | Province **SVG/GeoJSON map** (geoBoundaries data), later **MapLibre + OpenFreeMap** | No tile costs or API keys                                     | Free                                                                          |
 | Images (start)       | In the repo, pre-optimised to WebP by a script          | Simple; works with Keystatic out of the box                                               | Free                                                                          |
@@ -308,8 +308,8 @@ Plant-in-Cambodia/
 - All pages statically generated (`generateStaticParams`).
 
 **Done when**
-- [ ] Every sample plant has a working page in both languages.
-- [ ] Lighthouse scores of 90+ for Performance, Accessibility, SEO on mobile.
+- [x] Every sample plant has a working page in both languages.
+- [ ] Lighthouse scores of 90+ for Performance, Accessibility, SEO on mobile. *(Accessibility 100 and SEO 100 met; Performance 87–89 on Khmer plant pages, 91–95 elsewhere.)*
 - [ ] Deployed and viewable on plantincambodia.org.
 
 **Ask me with:** `Develop Phase 3 from docs/DEVELOPMENT_PHASES.md`
@@ -535,3 +535,4 @@ Ask for any item by name, e.g. `Develop Phase 11: R2 photo storage`.
 | 2026-11-01 | Phase 2 done: Keystatic content model (7 collections), seed data (25 provinces, 17 habitats, 20 families, 10 sample plants, 3 pages), typed readers, `pnpm validate` + tests in CI, `docs/DATA_DICTIONARY.md`. Khmer texts for plants still to be written. |
 | 2026-11-01 | Phase 1: PR #1 merged with CI green; first deploy live at https://plant-in-cambodia.horngfu.workers.dev; Workers Builds connected to GitHub. Waiting on the domain. |
 | 2026-11-02 | Phase 2 merged (PR #2). Cloudflare Workers Builds now deploys `main` automatically and builds a preview for every branch. Fixed branch previews: added a `previews` block and made `cf-build` ship the prerendered pages. Phase 1 waits only on the domain. |
+| 2026-11-02 | Phase 3 built: next-intl (`/km`, `/en`, static `/` language picker), design system, home, plants, plant detail, family, province and info pages, SEO (hreflang, canonical, sitemap, Taxon JSON-LD, share image). 130 static pages. Switched to system fonts (your choice) for speed. Lighthouse mobile: accessibility 100, best practices 100, SEO 100 apart from the pre-launch noindex; performance 91–95 on home, list and province pages and English plant pages, 87–89 on Khmer plant pages (hydration time on long Khmer pages; revisit in Phase 10). Khmer UI text (`messages/km.json`) needs a native speaker's review. |
