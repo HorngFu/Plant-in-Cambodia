@@ -79,9 +79,17 @@ body {
   color: var(--foreground);
 }
 
-/* Khmer script stacks consonants and vowels vertically and needs more line height than Latin. */
+/* Khmer script stacks consonants and vowels vertically and needs more line height than Latin.
+   Khmer fonts go first: if the first font lacks Khmer glyphs, the browser looks up a fallback
+   for every run of text, which more than doubled layout time on Khmer pages. */
 :lang(km) {
+  font-family:
+    "Noto Sans Khmer", "Khmer UI", "Khmer Sangam MN", "Khmer MN", "Leelawadee UI", system-ui,
+    sans-serif;
   line-height: 1.85;
+}
+:lang(en) {
+  font-family: var(--font-sans);
 }
 :lang(km) :is(h1, h2, h3) {
   line-height: 1.6;

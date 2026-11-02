@@ -309,7 +309,7 @@ Plant-in-Cambodia/
 
 **Done when**
 - [x] Every sample plant has a working page in both languages.
-- [ ] Lighthouse scores of 90+ for Performance, Accessibility, SEO on mobile.
+- [ ] Lighthouse scores of 90+ for Performance, Accessibility, SEO on mobile. *(Accessibility 100 and SEO 100 met; Performance 87–89 on Khmer plant pages, 91–95 elsewhere.)*
 - [ ] Deployed and viewable on plantincambodia.org.
 
 **Ask me with:** `Develop Phase 3 from docs/DEVELOPMENT_PHASES.md`
@@ -535,4 +535,4 @@ Ask for any item by name, e.g. `Develop Phase 11: R2 photo storage`.
 | 2026-11-01 | Phase 2 done: Keystatic content model (7 collections), seed data (25 provinces, 17 habitats, 20 families, 10 sample plants, 3 pages), typed readers, `pnpm validate` + tests in CI, `docs/DATA_DICTIONARY.md`. Khmer texts for plants still to be written. |
 | 2026-11-01 | Phase 1: PR #1 merged with CI green; first deploy live at https://plant-in-cambodia.horngfu.workers.dev; Workers Builds connected to GitHub. Waiting on the domain. |
 | 2026-11-02 | Phase 2 merged (PR #2). Cloudflare Workers Builds now deploys `main` automatically and builds a preview for every branch. Fixed branch previews: added a `previews` block and made `cf-build` ship the prerendered pages. Phase 1 waits only on the domain. |
-| 2026-11-02 | Phase 3 built: next-intl (`/km`, `/en`, static `/` language picker), design system, home, plants, plant detail, family, province and info pages, SEO (hreflang, canonical, sitemap, Taxon JSON-LD, share image). 130 static pages. Switched to system fonts (your choice) for speed: Lighthouse mobile performance 90–95, accessibility 100, best practices 100, SEO 100 apart from the pre-launch noindex. Khmer UI text (`messages/km.json`) needs a native speaker's review. |
+| 2026-11-02 | Phase 3 built: next-intl (`/km`, `/en`, static `/` language picker), design system, home, plants, plant detail, family, province and info pages, SEO (hreflang, canonical, sitemap, Taxon JSON-LD, share image). 130 static pages. Switched to system fonts (your choice) for speed. Lighthouse mobile: accessibility 100, best practices 100, SEO 100 apart from the pre-launch noindex; performance 91–95 on home, list and province pages and English plant pages, 87–89 on Khmer plant pages (hydration time on long Khmer pages; revisit in Phase 10). Khmer UI text (`messages/km.json`) needs a native speaker's review. |
