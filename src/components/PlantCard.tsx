@@ -1,6 +1,6 @@
 import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { Locale } from "@/i18n/routing";
-import type { Plant } from "@/lib/content";
+import type { PlantSummary } from "@/lib/content";
 import { commonName, pick } from "@/lib/localize";
 import { IucnBadge, OriginBadge } from "./Badge";
 import { LeafIcon } from "./icons";
@@ -10,7 +10,7 @@ export function PlantCard({
   locale,
   headingLevel = 3,
 }: {
-  plant: Plant;
+  plant: PlantSummary;
   locale: Locale;
   /** 2 when the cards sit directly under the page's h1. */
   headingLevel?: 2 | 3;

@@ -9,8 +9,8 @@
     "node": ">=22"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "tsx scripts/build-data.ts && next dev",
+    "build": "tsx scripts/build-data.ts && next build",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
@@ -22,7 +22,8 @@
     "cf-build": "opennextjs-cloudflare build && opennextjs-cloudflare populateCache local",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "validate": "tsx scripts/validate-content.ts",
-    "test": "node --import tsx --test scripts/*.test.ts"
+    "test": "tsx scripts/build-data.ts && node --import tsx --test scripts/*.test.ts",
+    "data": "tsx scripts/build-data.ts"
   },
   "dependencies": {
     "@keystatic/core": "^0.6.9",

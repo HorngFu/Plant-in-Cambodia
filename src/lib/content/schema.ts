@@ -19,7 +19,8 @@ import {
   values,
 } from "./vocab";
 
-const KHMER_SCRIPT = /[ក-៿]/;
+// Khmer block, U+1780–U+17FF.
+const KHMER_SCRIPT = new RegExp(`[${String.fromCharCode(0x1780)}-${String.fromCharCode(0x17ff)}]`);
 
 const text = z.string().trim().min(1);
 const khmerText = text.regex(KHMER_SCRIPT, "must be written in Khmer script");

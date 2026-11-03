@@ -34,6 +34,8 @@ type Collections = (typeof keystaticConfig)["collections"];
 type WithSlug<T> = T & { slug: string };
 
 export type Plant = WithSlug<EntryWithResolvedLinkedFiles<Collections["plants"]>>;
+/** A plant without its long texts loaded: enough for cards and lists. */
+export type PlantSummary = WithSlug<Entry<Collections["plants"]>>;
 export type Family = WithSlug<Entry<Collections["families"]>>;
 export type Province = WithSlug<Entry<Collections["provinces"]>>;
 export type Habitat = WithSlug<Entry<Collections["habitats"]>>;
@@ -45,9 +47,9 @@ const withSlug = <T>({ slug, entry }: { slug: string; entry: T }) => ({ slug, ..
 const byName = (key: string) => (a: Record<string, unknown>, b: Record<string, unknown>) =>
   String(a[key]).localeCompare(String(b[key]));
 
-/** All plants, sorted by scientific name. Rich-text fields are resolved. */
-export const getPlants = cache(async (): Promise<Plant[]> => {
-  const all = await reader().collections.plants.all({ resolveLinkedFiles: true });
+/** All plants, sorted by scientific name, without their long texts (fast with thousands). */
+export const getPlantList = cache(async (): Promise<PlantSummary[]> => {
+  const all = await reader().collections.plants.all();
   return all.map(withSlug).sort(byName("scientificName"));
 });
 
@@ -89,8 +91,8 @@ export const getPageSlugs = cache(async (): Promise<string[]> => reader().collec
 export async function getPlantsBy(
   field: "family" | "provinces" | "habitats",
   slug: string,
-): Promise<Plant[]> {
-  const plants = await getPlants();
+): Promise<PlantSummary[]> {
+  const plants = await getPlantList();
   return plants.filter((p) =>
     field === "family" ? p.family === slug : (p[field] as readonly string[]).includes(slug),
   );

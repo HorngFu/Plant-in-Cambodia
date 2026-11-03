@@ -4,7 +4,7 @@ import { PlantCard, PlantGrid } from "@/components/PlantCard";
 import { SearchForm } from "@/components/SearchForm";
 import { LocaleLink as Link } from "@/components/LocaleLink";
 import type { Locale } from "@/i18n/routing";
-import { getFamilies, getPlants } from "@/lib/content";
+import { getFamilies, getPlantList } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]">): Promise<Metadata> {
@@ -18,7 +18,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "home" });
 
-  const [plants, families] = await Promise.all([getPlants(), getFamilies()]);
+  const [plants, families] = await Promise.all([getPlantList(), getFamilies()]);
   const familiesInUse = new Set(plants.map((p) => p.family)).size;
   const photos = plants.reduce((n, p) => n + p.images.length, 0);
   const featured = plants.filter((p) => p.profileLevel === "full").slice(0, 6);

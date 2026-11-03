@@ -31,7 +31,8 @@ Open <http://localhost:3000>. The content admin is at <http://localhost:3000/key
 | `pnpm lint`       | ESLint                                                         |
 | `pnpm typecheck`  | TypeScript check                                               |
 | `pnpm validate`   | Check every file in `content/` (fields, relations, duplicates) |
-| `pnpm test`       | Tests (including the content validator)                        |
+| `pnpm test`       | Tests (content validator, search)                              |
+| `pnpm data`       | Rebuild `public/data/` (search index); `dev` and `build` run it |
 | `pnpm preview`    | Build for Cloudflare and run it in the local Workers runtime   |
 | `pnpm deploy`     | Build and deploy to Cloudflare (CI does this automatically)    |
 
@@ -43,7 +44,8 @@ src/app/            Next.js routes (/km and /en public site, /keystatic admin, /
 src/components/     UI components
 messages/           interface text in Khmer (km.json) and English (en.json)
 src/lib/content/    typed readers over content/ (build time only)
-scripts/            validation and data tools
+scripts/            validation, data build (build-data.ts) and test tools
+public/data/        generated at build time, git-ignored
 docs/               plan, data dictionary
 ```
 

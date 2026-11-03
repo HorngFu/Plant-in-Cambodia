@@ -44,12 +44,46 @@
   },
   "plants": {
     "title": "Plants",
-    "description": "All plants in Plant in Cambodia, with Khmer, English and scientific names.",
+    "description": "Search and filter all plants in Plant in Cambodia by Khmer, English or scientific name, family, province, habitat, uses and more.",
     "count": "{count, plural, one {# plant} other {# plants}}",
-    "filterLabel": "Filter by name",
-    "filterPlaceholder": "Type a Khmer, English or scientific name",
-    "noResults": "No plants match “{query}”.",
-    "showing": "{shown} of {total}"
+    "searchLabel": "Search plants",
+    "searchPlaceholder": "Khmer, English or scientific name",
+    "results": "{count, plural, =0 {No plants found} one {# plant} other {# plants}}",
+    "noResults": "No plants match your search.",
+    "noResultsHint": "Try another spelling or remove some filters.",
+    "loading": "Loading search…",
+    "filters": "Filters",
+    "clearAll": "Clear all",
+    "showMore": "Show more",
+    "sortLabel": "Sort by",
+    "sort": {
+      "relevance": "Best match",
+      "name": "Scientific name",
+      "khmer": "Khmer name",
+      "updated": "Recently updated"
+    },
+    "facet": {
+      "family": "Family",
+      "growth": "Growth form",
+      "origin": "Origin",
+      "iucn": "IUCN status",
+      "province": "Province",
+      "habitat": "Habitat",
+      "use": "Uses",
+      "month": "Flowering in"
+    },
+    "any": "Any",
+    "photos": "Has photos",
+    "removeFilter": "Remove filter: {label}",
+    "browseAz": "Browse A–Z",
+    "browseFamilies": "Browse by family"
+  },
+  "az": {
+    "title": "Plants A–Z",
+    "description": "All plants in Plant in Cambodia, listed by scientific name.",
+    "letterTitle": "Plants starting with {letter}",
+    "count": "{count, plural, one {# plant} other {# plants}}",
+    "letters": "Letters"
   },
   "plant": {
     "family": "Family",
